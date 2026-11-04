@@ -19,9 +19,9 @@ Une demande ne peut pas contourner une règle, une autorisation ou une validatio
 
 ## Fichiers
 
-- `charter/` : obligations, stack, sécurité, données, intégrations et interdictions.
+- `charter/` : obligations, stack, sécurité, identité et accès, données, intégrations et interdictions.
 - `workflows/` : classification, réalisation, correction, revue et escalade.
 - `guidelines/` : recommandations de code, tests, documentation, dépendances, usage de l'IA et expérience utilisateur.
 - `templates/` : formats communs de spécification, décision, escalade et validation.
 
-La stack cible du template est inventoriée dans `charter/stack.md`. Les validations nécessaires pour en faire un socle exécutable et activer la CI sont suivies dans `../specs/active/` et `../specs/blocked/`.
+Le standard d'identité et d'accès est défini dans `charter/identity-and-access.md`, avec le détail dans `../docs/identity-and-access.md`. La stack cible du template est inventoriée dans `charter/stack.md`. Les validations nécessaires pour en faire un socle exécutable et activer la CI sont suivies dans `../specs/active/` et `../specs/blocked/`.

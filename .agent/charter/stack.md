@@ -14,7 +14,7 @@ DV Citizen Starter définit un socle TypeScript en monorepo. Le profil comprend 
 | API | NestJS `12`, TypeScript ESM, Express | Règles métier, contrôle des autorisations, services et accès aux données |
 | Validation des entrées | Zod, class-validator, class-transformer | Validation aux frontières de confiance selon le standard retenu |
 | Données | PostgreSQL `18.6`, Prisma `7.10.0` et adaptateur PostgreSQL | Stockage relationnel ; versions exactes à confirmer avant initialisation |
-| Identité | Fournisseur d'identité d'entreprise via OIDC | À valider par l'IT ; aucune application ou permission n'est configurée dans ce kit |
+| Identité | Microsoft Entra ID via OIDC | Modèle de référence validé ; tenant, App Registration, permissions et données autorisées sont provisionnés par l'IT pour chaque application |
 | Mobile (optionnel) | Expo `57`, React Native `0.86.3`, Expo Router | Client natif si le besoin métier le justifie ; builds gérés par EAS après approbation |
 | Tests API/Web | Vitest `5`, tests NestJS, Supertest `7`, Testing Library, jsdom | Tests automatisés des services, routes et composants |
 | Tests mobile | Jest `29`, jest-expo | À utiliser uniquement si l'application mobile est retenue |

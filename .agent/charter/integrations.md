@@ -1,6 +1,6 @@
 ## Portée
 
-Ce template ne configure ni ne déclare d'intégration externe comme active. Toute intégration d'un projet dérivé doit être approuvée pour son besoin, son propriétaire, son identité et ses données. Ne pas considérer une technologie citée dans une demande comme approuvée.
+Ce template ne configure aucune intégration externe opérationnelle. Le modèle de référence Entra ID/OIDC défini dans `.agent/charter/identity-and-access.md` est approuvé ; son guide détaillé est dans `docs/identity-and-access.md`. Les paramètres et permissions d'annuaire restent provisionnés par l'IT pour chaque application. Toute autre intégration d'un projet dérivé doit être approuvée pour son besoin, son propriétaire, son identité et ses données. Ne pas considérer une technologie citée dans une demande comme approuvée hors de ce périmètre.
 
 Pour chaque intégration approuvée, la spécification précisera son rôle, son emplacement, son mode d'authentification, sa configuration, les erreurs attendues, les restrictions et les données envoyées/reçues.
 

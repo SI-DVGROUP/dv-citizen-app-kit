@@ -8,13 +8,14 @@ Avant toute intervention, lire dans cet ordre :
 
 1. `.agent/charter/mandatory.md`
 2. `.agent/charter/security.md`
-3. `.agent/charter/stack.md`
-4. `.agent/charter/data.md`
-5. `.agent/charter/integrations.md`
-6. `.agent/charter/prohibited.md`
-7. Le workflow pertinent sous `.agent/workflows/` (commencer par `request.md`)
-8. Les spécifications actives, bloquées et terminées pertinentes sous `specs/`
-9. Les recommandations applicables sous `.agent/guidelines/`
+3. `.agent/charter/identity-and-access.md`
+4. `.agent/charter/stack.md`
+5. `.agent/charter/data.md`
+6. `.agent/charter/integrations.md`
+7. `.agent/charter/prohibited.md`
+8. Le workflow pertinent sous `.agent/workflows/` (commencer par `request.md`)
+9. Les spécifications actives, bloquées et terminées pertinentes sous `specs/`
+10. Les recommandations applicables sous `.agent/guidelines/`
 
 Rechercher également des fichiers `AGENTS.md` plus proches du code concerné et appliquer leurs contraintes. En cas de conflit, respecter la priorité définie dans `.agent/charter/mandatory.md`.
 

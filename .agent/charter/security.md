@@ -28,4 +28,4 @@ Le kit définit une stack cible mais ne contient pas encore de code applicatif. 
 - [MUST] Utiliser HTTPS avec validation de certificat active pour toute communication réseau exposée.
 - [MUST] Chiffrer les secrets d'intégration selon un mécanisme approuvé et ne jamais renvoyer leur valeur au client. Les clés de chiffrement restent injectées par le magasin de secrets approuvé.
 
-Le fournisseur d'identité, les permissions d'accès et les composants partagés sont **À valider par l'IT** pour ce template avant d'implémenter une authentification ou une intégration.
+Le modèle de référence d'identité et d'accès Microsoft Entra ID/OIDC est validé et défini dans `.agent/charter/identity-and-access.md` ; son guide détaillé est dans `docs/identity-and-access.md`. Les paramètres propres à chaque application (tenant, App Registration, permissions, secrets et données lues) doivent être provisionnés et autorisés par l'IT avant implémentation. L'accès aux composants partagés reste à valider par l'IT.
