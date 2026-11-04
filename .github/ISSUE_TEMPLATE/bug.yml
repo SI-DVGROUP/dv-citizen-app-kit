@@ -1,0 +1,44 @@
+name: Signaler une anomalie
+description: Décrire ce qui s'est passé et ce qui était attendu
+title: "[Anomalie] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Décrivez la situation avec vos mots. Aucune analyse technique n'est attendue. N'incluez pas de donnée sensible."
+  - type: textarea
+    id: original_request
+    attributes:
+      label: Description originale
+      description: Que faisiez-vous lorsque le problème est apparu ?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ce que vous attendiez
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Ce qui s'est produit
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Personnes concernées
+      options:
+        - Moi uniquement
+        - Plusieurs personnes
+        - Je ne sais pas
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Exemple non sensible
+      description: Toute information utile, sans donnée personnelle ou confidentielle.
+    validations:
+      required: false

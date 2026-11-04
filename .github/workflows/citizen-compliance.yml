@@ -1,0 +1,5 @@
+# Workflow volontairement désactivé : la plateforme CI/CD n'est pas détectée et
+# Workflow volontairement désactivé : le mécanisme CI/CD du template doit être
+# choisi et approuvé avant d'ajouter un déclencheur, une action ou un runner.
+# Une fois approuvé, implémenter ici uniquement des contrôles compatibles avec
+# la stack validée et les commandes consignées dans AGENTS.md.

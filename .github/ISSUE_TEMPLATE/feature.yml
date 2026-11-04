@@ -1,0 +1,37 @@
+name: Besoin fonctionnel
+description: Décrire un besoin métier en langage naturel
+title: "[Besoin] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Décrivez le résultat métier souhaité. Aucun choix technique n'est attendu."
+  - type: textarea
+    id: original_request
+    attributes:
+      label: Votre besoin
+      description: Écrivez avec vos mots ce que vous souhaitez pouvoir faire.
+      placeholder: "Je souhaite..."
+    validations:
+      required: true
+  - type: textarea
+    id: users
+    attributes:
+      label: Personnes concernées
+      description: Qui rencontre ce besoin ?
+    validations:
+      required: false
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Résultat attendu
+      description: Comment saurez-vous que le besoin est satisfait ?
+    validations:
+      required: false
+  - type: textarea
+    id: example
+    attributes:
+      label: Exemple non sensible
+      description: Ajoutez un exemple concret sans donnée personnelle ou confidentielle.
+    validations:
+      required: false

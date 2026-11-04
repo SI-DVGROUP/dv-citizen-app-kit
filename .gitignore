@@ -1,0 +1,13 @@
+# Environnements et secrets
+.env
+.env.*
+!.env.example
+
+# Fichiers locaux d'éditeur et système
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Les fichiers générés propres à une stack devront être ajoutés après validation IT.
