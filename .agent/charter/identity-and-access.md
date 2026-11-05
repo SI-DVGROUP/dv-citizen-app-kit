@@ -30,6 +30,7 @@ Cette charte est le résumé normatif du standard identité et accès validé po
 
 - [MUST] Permettre l'administration de la configuration des fournisseurs depuis l'espace dédié autorisé, avec validation, journal d'audit et possibilité de retour arrière ; son application ne nécessite pas une nouvelle livraison.
 - [MUST] Stocker les secrets hors de la base applicative et du dépôt ; seule une référence protégée au mécanisme de secrets approuvé peut être configurée.
-- [MUST] L'IT provisionne et reste propriétaire des tenants, App Registrations, identités techniques, permissions Entra/Graph, attributs autorisés et paramètres propres à chaque application.
+- [MUST] L'IT reste propriétaire des tenants, App Registrations, identités techniques, permissions Entra/Graph et attributs autorisés au niveau de la plateforme. Le provisionnement standard propre à chaque application est automatisé à partir de profils et permissions préapprouvés ; il ne demande pas d'opération manuelle projet par projet.
+- [MUST] Le parcours automatisé n'expose au Citizen ni privilège d'administration du tenant, ni choix de scopes/permissions, ni possibilité de fournir des URLs ou identifiants de fournisseur arbitraires.
 - [MUST] Appliquer le moindre privilège, TLS avec validation de certificat, et les règles de `.agent/charter/security.md` et `.agent/charter/integrations.md`.
 - [MUST] Ne jamais inventer un tenant, une permission, un secret, une portée ou une configuration d'environnement. Le Citizen ne choisit pas les permissions techniques.

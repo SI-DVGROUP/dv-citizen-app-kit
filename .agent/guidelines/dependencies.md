@@ -7,4 +7,4 @@ Aucun manifeste de dépendances n'est présent dans ce kit. La stack cible utili
 - [SHOULD] Préférer les capacités et composants déjà disponibles dans le dépôt ; documenter le besoin, l'alternative examinée et l'impact dans la spécification.
 - [MUST] Ne pas demander au Citizen de choisir un package.
 
-Aucun gestionnaire de paquets ni manifeste n'a été détecté ; ne pas inventer de commande d'installation.
+Aucun gestionnaire de paquets ni manifeste n'a été détecté dans ce kit ; ne pas inventer de commande d'installation. Dans un dépôt applicatif, utiliser les manifests réels du projet.

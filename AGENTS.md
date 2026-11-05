@@ -27,6 +27,6 @@ Implémenter, ajouter ou mettre à jour les tests pertinents, exécuter uniqueme
 
 ## Validation connue
 
-La stack cible est inventoriée dans `.agent/charter/stack.md`. Ce kit ne contient toujours aucun code applicatif, manifeste, gestionnaire installé, script de validation ou pipeline actif ; ne pas annoncer de commandes comme exécutables ici avant leur présence dans le dépôt. Les commandes d'un fork doivent être documentées à partir de ses manifests réels.
+La stack cible et les décisions encore ouvertes sont inventoriées dans `.agent/charter/stack.md`. Ce dépôt fournit les règles de gouvernance et la documentation ; il ne contient pas de code applicatif, de manifest, de script de validation ou de pipeline actif. Les commandes d'un projet Citizen doivent être vérifiées à partir de ses manifests réels. Ne jamais annoncer une commande comme exécutable ou un contrôle comme réussi sans l'avoir vérifié.
 
 Ne jamais annoncer une vérification comme réussie si elle n'a pas été exécutée. Une fonctionnalité n'est terminée qu'après ses vérifications disponibles et sa validation fonctionnelle par le Citizen.

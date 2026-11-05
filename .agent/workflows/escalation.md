@@ -1,7 +1,9 @@
 # Escalade
 
-Escalader notamment en cas de technologie hors stack, nouvelle base ou infrastructure, nouveau service/API, App Registration, permission Microsoft Graph, secret ou certificat, exposition Internet, nouvelle donnée sensible, authentification non prévue, besoin Kubernetes/infrastructure IT, traitement métier critique, absence de propriétaire métier ou impossibilité de respecter une règle `[MUST]`.
+Escalader uniquement lorsqu'un besoin sort du catalogue de capacités déjà approuvé et automatisé, ou présente un risque qui ne peut pas être traité par les contrôles du scaffold : technologie ou service non pris en charge, nouvelle donnée sensible, permission non couverte, exposition Internet ou impossibilité de respecter une règle `[MUST]`. Les ressources standard (identité, environnement, CI/CD et déploiement) doivent être fournies par le template ou son parcours self-service ; elles ne déclenchent pas une demande manuelle projet par projet.
 
 Créer une fiche dans `specs/blocked/` avec `.agent/templates/escalation.md`. Ne pas poursuivre la partie bloquée. Préserver toute partie indépendante conforme et n'indiquer une solution temporaire que si elle est explicitement autorisée et conforme aux chartes.
+
+L'escalade porte sur une capacité absente du produit plateforme, pas sur une opération que l'équipe devrait répéter pour chaque application. Elle est limitée au périmètre qui dépend de cette capacité ; le projet entier n'est pas suspendu par défaut. Continuer les travaux indépendants dans le cadre approuvé. Pour le développement local, utiliser uniquement des données fictives et des contrats simulés, sans secret, donnée réelle sensible ni prétention qu'un accès ou une intégration est opérationnel. Indiquer dans la fiche ce qui est bloqué et ce qui peut continuer.
 
 Présenter le blocage en termes simples, par exemple : « Cette fonctionnalité nécessite un nouvel accès au système concerné. L'IT doit valider cet accès avant que je puisse poursuivre. J'ai documenté le besoin et les données concernées. »

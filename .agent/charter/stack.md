@@ -2,7 +2,15 @@
 
 ## Profil cible
 
-DV Citizen Starter définit un socle TypeScript en monorepo. Le profil comprend une application Web, une API et une base relationnelle ; le mobile est optionnel selon le besoin métier. Le kit ne contient pas encore de manifests ni de code applicatif : aucune commande de build, test ou démarrage n'est exécutable ici.
+DV Citizen Starter définit un socle TypeScript en monorepo. Le profil comprend une application Web, une API et une base relationnelle ; le mobile est optionnel selon le besoin métier. Ce kit ne contient pas de manifests ni de code applicatif ; les commandes de développement et de validation appartiennent au projet Citizen.
+
+## Exigence d'autonomie à la livraison
+
+- [MUST] Déterminer centralement la stack et les capacités standards afin que l'agent puisse implémenter et tester les features et fixtures conformes sans validation manuelle par demande.
+- [MUST] Automatiser les ressources standards propres à un projet au moyen de valeurs par défaut ou d'un parcours self-service limité au catalogue approuvé ; leur livraison peut rester soumise aux contrôles d'environnement prévus.
+- [MUST] Traiter une capacité hors catalogue comme une évolution du produit plateforme avant de la proposer aux projets ; ne pas demander au Citizen de contourner le cadre ou de configurer des privilèges techniques.
+
+Ces exigences décrivent le cadre de développement ; ce kit reste documentaire et ne fournit pas de scaffold applicatif.
 
 | Composant | Technologie cible | Rôle et statut |
 | --- | --- | --- |
@@ -14,7 +22,7 @@ DV Citizen Starter définit un socle TypeScript en monorepo. Le profil comprend 
 | API | NestJS `12`, TypeScript ESM, Express | Règles métier, contrôle des autorisations, services et accès aux données |
 | Validation des entrées | Zod, class-validator, class-transformer | Validation aux frontières de confiance selon le standard retenu |
 | Données | PostgreSQL `18.6`, Prisma `7.10.0` et adaptateur PostgreSQL | Stockage relationnel ; versions exactes à confirmer avant initialisation |
-| Identité | Microsoft Entra ID via OIDC | Modèle de référence validé ; tenant, App Registration, permissions et données autorisées sont provisionnés par l'IT pour chaque application |
+| Identité | Microsoft Entra ID via OIDC | Modèle de référence validé ; le provisionnement propre à chaque application doit être automatisé par la plateforme à partir de paramètres préapprouvés |
 | Mobile (optionnel) | Expo `57`, React Native `0.86.3`, Expo Router | Client natif si le besoin métier le justifie ; builds gérés par EAS après approbation |
 | Tests API/Web | Vitest `5`, tests NestJS, Supertest `7`, Testing Library, jsdom | Tests automatisés des services, routes et composants |
 | Tests mobile | Jest `29`, jest-expo | À utiliser uniquement si l'application mobile est retenue |
@@ -28,7 +36,7 @@ DV Citizen Starter définit un socle TypeScript en monorepo. Le profil comprend 
 
 ## Commandes cibles
 
-Après création des manifests, les commandes prévues sont `pnpm install --frozen-lockfile`, `pnpm dev`, `pnpm build`, `pnpm test`, `pnpm lint`, `pnpm typecheck` et `pnpm format:check`. Les tâches de données envisagées sont `pnpm db:generate`, `pnpm db:migrate` et `pnpm db:seed`. Elles ne sont pas exécutables dans le kit tant que les scripts correspondants n'y sont pas créés.
+Après création des manifests du projet, les commandes prévues sont `pnpm install --frozen-lockfile`, `pnpm dev`, `pnpm build`, `pnpm test`, `pnpm lint`, `pnpm typecheck` et `pnpm format:check`. Elles ne sont pas exécutables dans ce kit documentaire.
 
 ## Décisions restantes
 

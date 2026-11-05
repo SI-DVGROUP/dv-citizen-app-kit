@@ -133,21 +133,21 @@ classDiagram
 
 ## 3. Authentification et configuration
 
-Le standard utilise le SSO d'entreprise via Microsoft Entra ID et OIDC. Les clients et paramètres d'application sont provisionnés par l'IT. Les contrôles d'autorisation restent dans la couche serveur de confiance ; masquer une page ou un bouton ne protège pas une API.
+Le standard utilise le SSO d'entreprise via Microsoft Entra ID et OIDC. La plateforme crée les clients et paramètres standards d'application par un parcours automatisé préapprouvé ; aucun ticket IT n'est requis pour un projet conforme au scaffold. Les contrôles d'autorisation restent dans la couche serveur de confiance ; masquer une page ou un bouton ne protège pas une API.
 
 ### Compte administrateur local
 
-Chaque application dispose d'un unique compte administrateur local pour l'administration et le secours. Il est géré séparément du SSO, exclu de la synchronisation Entra et protégé selon les règles de sécurité approuvées. Aucun autre compte local n'est permis. La création, la récupération, le stockage du secret et la surveillance suivent le processus IT ; ne jamais mettre le mot de passe ou son hash dans le dépôt.
+Chaque application dispose d'un unique compte administrateur local pour l'administration et le secours. Il est géré séparément du SSO, exclu de la synchronisation Entra et protégé selon les règles de sécurité approuvées. Aucun autre compte local n'est permis. Sa création et son stockage suivent le processus automatisé approuvé ; la récupération est réservée au processus de support autorisé. Ne jamais mettre le mot de passe ou son hash dans le dépôt.
 
 ### Fournisseur dynamique
 
 La configuration des fournisseurs est administrable depuis une page dédiée et peut être appliquée sans nouvelle livraison. Son accès est réservé aux administrateurs autorisés. Toute modification est validée, auditée et réversible selon les contrôles de l'application ; les identifiants de fournisseur et secrets restent gérés par l'IT.
 
-Les valeurs sensibles (secret client, clé privée ou certificat) restent dans le mécanisme de secrets approuvé. La base et l'interface ne stockent ou n'affichent que la référence protégée. Tenant, client, émetteur et URL sont provisionnés par l'IT ; ne pas accepter une URL d'autorité arbitraire depuis l'interface d'administration.
+Les valeurs sensibles (secret client, clé privée ou certificat) restent dans le mécanisme de secrets approuvé. La base et l'interface ne stockent ou n'affichent que la référence protégée. Tenant, client, émetteur et URL sont injectés par le provisionnement automatisé depuis le profil approuvé ; ne pas accepter une URL d'autorité arbitraire depuis l'interface d'administration.
 
 ### Permissions d'annuaire
 
-La synchronisation standard utilise les groupes et attributs Entra autorisés pour l'application. L'IT fournit l'identité technique et les permissions minimales nécessaires, et reste propriétaire de l'App Registration et de son exploitation. Ne jamais utiliser un compte personnel comme identité de synchronisation. Aucune permission, valeur de tenant ou donnée réelle n'est inscrite dans le template.
+La synchronisation standard utilise les groupes et attributs Entra autorisés pour l'application. La plateforme provisionne l'identité technique et les permissions minimales depuis le profil approuvé ; l'IT conserve la propriété centrale de l'App Registration et du mécanisme de provisionnement. Ne jamais utiliser un compte personnel comme identité de synchronisation. Aucune permission, valeur de tenant ou donnée réelle n'est inscrite dans le template.
 
 ## 4. Première connexion SSO : scénario illustratif
 
@@ -196,7 +196,7 @@ Ne jamais désactiver des utilisateurs parce qu'une requête a échoué, qu'une 
 
 ## 6. Exemple fictif de réconciliation
 
-Les noms `G-APP-USERS`, `G-APP-ADMINS`, `G-APP-OPERATORS` et `G-APP-VISITORS` ci-dessous sont fictifs. Chaque application configure ses propres groupes avec l'IT.
+Les noms `G-APP-USERS`, `G-APP-ADMINS`, `G-APP-OPERATORS` et `G-APP-VISITORS` ci-dessous sont fictifs. Chaque application sélectionne ses groupes parmi les choix autorisés par le parcours standard ; aucune permission technique n'est demandée au Citizen.
 
 | Personne fictive | État avant l'exécution complète | Changement observé | Résultat standard |
 | --- | --- | --- | --- |
@@ -214,14 +214,14 @@ Désactiver un `User` ne supprime pas ses données métier. Les comptes associé
 
 Conserver un historique contrôlé des changements de rôles, désactivations, réactivations et synchronisations : horodatage, résultat de l'exécution, règle/mapping à l'origine et identité technique ou opérateur selon le cas. Limiter les données personnelles consignées et ne jamais journaliser secrets, jetons ou réponses complètes de l'annuaire.
 
-## 8. Paramètres à provisionner par application
+## 8. Paramètres standards par application
 
-- Tenant, App Registration, URI de redirection et permissions minimales fournies par l'IT.
-- Groupes de provisionnement et de rôles, règles de groupes imbriqués et fréquence de synchronisation.
-- Attributs importés, source de vérité, classification et conservation des données de profil.
-- Permissions précises associées aux trois rôles et aux fonctionnalités de l'application.
-- Limite de fraîcheur des données et alertes de synchronisation.
-- Références de secrets, accès à la page d'administration des fournisseurs et procédure de récupération de l'unique compte administrateur local.
-- Responsables opérationnels, audit et procédure de support propres à l'application.
+- Tenant, App Registration, URI de redirection et permissions minimales injectés par le provisionnement automatisé.
+- Groupes de provisionnement et de rôles sélectionnés dans le périmètre autorisé, avec règles standard de synchronisation.
+- Attributs importés, source de vérité, classification et conservation définis par les profils approuvés.
+- Permissions précises associées aux trois rôles et aux fonctionnalités, limitées au catalogue autorisé.
+- Limite de fraîcheur des données et alertes selon la configuration standard de la plateforme.
+- Références de secrets, administration des fournisseurs et récupération du compte administrateur gérées selon les contrôles de la plateforme.
+- Audit et support assurés par les services partagés de la plateforme.
 
-Le modèle d'identité et d'accès décrit dans ce guide est le standard approuvé du kit. Les paramètres ci-dessus sont fournis pour chaque application par l'IT ; les noms fictifs de l'exemple ne constituent pas une configuration opérationnelle.
+Le modèle d'identité et d'accès décrit dans ce guide est le standard cible du kit. Les automatisations nécessaires ne sont pas encore présentes dans ce dépôt ; les noms fictifs de l'exemple ne constituent pas une configuration opérationnelle.

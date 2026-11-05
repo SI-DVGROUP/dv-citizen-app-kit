@@ -12,6 +12,6 @@ La Web, l'API et le mobile ne partagent pas directement leurs responsabilités m
 
 ## Limites d'application au kit
 
-Ce kit ne contient pas encore d'application ni de packages. L'architecture ci-dessus est une référence issue d'une seule application, pas une preuve d'approbation universelle. Le profil de travail envisagé pour le Citizen Dev est Web + API ; le mobile reste optionnel selon le besoin métier. La généralisation de ces choix, l'accès aux packages privés et les décisions de sécurité sont à valider par l'IT avant de créer un squelette exécutable.
+Ce dépôt documente une architecture de référence observée ; il ne contient pas le code applicatif. Le Citizen réalise les features et fixtures dans le dépôt applicatif du projet, en respectant les choix approuvés. Le développement local et les tests ne doivent pas dépendre de l'accès à une intégration réelle ou de la livraison en environnement partagé. Le mobile reste optionnel selon le besoin métier.
 
 Ne jamais placer de secrets ou d'identifiants d'environnement dans le template. Les décisions de stack, d'identité, de déploiement et d'intégration sont consignées dans `.agent/charter/stack.md` et `specs/active/`.
